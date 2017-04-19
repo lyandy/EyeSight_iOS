@@ -1,0 +1,77 @@
+//
+//  EyeSight-Prefix.pch
+//  EyeSight
+//
+//  Created by 李扬 on 15/10/21.
+//  Copyright © 2015年 andyli. All rights reserved.
+//
+
+#ifndef EyeSight_Prefix_pch
+#define EyeSight_Prefix_pch
+#endif /* EyeSight_Prefix_pch */
+// 1.判断是否为iOS8
+#define iOS8AndLater ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+
+// 2.获得RGB颜色
+#define AndyColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define AndyNavigationBarTintColor AndyColor(255, 255, 255, 0.85)
+
+#define AndyVideoListBaseModelTitleFont [UIFont fontWithName:@"Helvetica-Bold" size:15]
+#define AndyVideoListBaseModelCategoryAndDurationFont [UIFont systemFontOfSize:12]
+#define AndyCategoryNameFont [UIFont fontWithName:@"Helvetica-Bold" size:15]
+#define AndyMainScreenSize [UIScreen mainScreen].bounds.size
+
+#define AndyVideoDetailViewTitleFont [UIFont fontWithName:@"Helvetica-Bold" size:16]
+#define AndyVideoDetailViewCategoryAndDurationFont [UIFont systemFontOfSize:13]
+#define AndyVideoDetailViewDescriptionFont [UIFont systemFontOfSize:13]
+
+#define LoadingInfo @"正在加载中..."
+#define LoadingError @"加载过程出错，请重试"
+#define NetworkOfflineAndCacheIsNull @"无网络连接，且本地无缓存"
+#define NetWorkOffline @"网络已断开，请检查您的网络链接"
+
+#define DailyCacheFileName @"Daily.txt"
+#define PastCategoryCacheFileName @"PastCategory.txt"
+#define RankWeekCacheFileName @"RankWeek.txt"
+#define RankMonthCacheFileName @"RankMonth.txt"
+#define RankAllCacheFileName @"RankAll.txt"
+
+
+#define XAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#define SettingWiFiKey @"SettingWiFiKey"
+#define SettingWiFiIsDownloadKey @"SettingWiFiIsDownloadKey"
+#define SettingWiFiIsPlayKey @"SettingWiFiIsPlayKey"
+#define SettingDownloadKey @"SettingDownloadKey"
+#define SettingFavoriteKey @"SettingFavoriteKey"
+#define SettingIsVideoAutoBack @"SettingIsVideoAutoBack"
+#define SettingDoubleTapKey @"SettingDoubleTapKey"
+
+#define CampaignIsAvailableKey @"CampaignIsAvailableKey"
+#define CampaignImageUrlKey @"CampaignImageUrlKey"
+#define CampaignActionUrlKey @"CampaignActionUrlKey"
+
+#define SplashScreenImageDateKey @"SplashScreenImageDateKey"
+
+// 3.自定义Log
+#ifdef DEBUG
+#define AndyLog(...) NSLog(__VA_ARGS__)
+#else
+#define AndyLog(...)
+#endif
+
+#ifdef __OBJC__
+
+#import "AndyHttpTool.h"
+#import "AndyCommonFunction.h"
+#import "AndyFMDBTool.h"
+#import "AndyDownloadTool.h"
+#import "AppDelegate.h"
+
+#import "WeiboSDK.h"
+#import "ShareConst.h"
+
+#endif
+
+
+

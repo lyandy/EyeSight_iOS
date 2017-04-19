@@ -1,0 +1,18 @@
+//
+//  AndyPastDetailListModel.h
+//  EyeSight
+//
+//  Created by 李扬 on 15/11/12.
+//  Copyright © 2015年 andyli. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface AndyPastDetailListModel : NSObject
+
+@property (nonatomic, copy) NSString *nextPageUrl;
+
+@property(nonatomic, strong) NSArray *videoList;
+
+
+@end
